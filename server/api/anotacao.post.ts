@@ -15,6 +15,6 @@ export default defineEventHandler(async (event) => {
 
     return {
         id: 'nova._id',
-        MONGO_URI: useRuntimeConfig()
+        MONGO_URI: process.env.MONGO_URI
     };
 });

@@ -6,7 +6,7 @@ import { defineEventHandler, readBody } from 'h3'
 export default defineEventHandler(async (event) => {
     const body = await readBody(event);
 
-    await connectDB();
+    // await connectDB();
 
     // const nova = await Anotacao.create({ texto: body.texto });
 

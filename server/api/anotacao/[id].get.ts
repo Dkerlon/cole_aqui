@@ -13,3 +13,4 @@ export default defineEventHandler(async (event) => {
 
     return { texto: nota.texto };
 });
+

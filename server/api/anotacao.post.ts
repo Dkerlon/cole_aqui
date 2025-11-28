@@ -1,6 +1,6 @@
 import { connectDB } from '../utils/mongoose';
 import { defineEventHandler, readBody } from 'h3'
-import Anotacao from '../schemas/Anotacao';
+// import Anotacao from '../schemas/Anotacao';
 
 
 export default defineEventHandler(async (event) => {
@@ -8,9 +8,13 @@ export default defineEventHandler(async (event) => {
 
     await connectDB();
 
-    const nova = await Anotacao.create({ texto: body.texto });
+    // const nova = await Anotacao.create({ texto: body.texto });
+
+    const config = useRuntimeConfig();
+    console.log({config: config})
 
     return {
-        id: nova._id
+        id: 'nova._id',
+        MONGO_URI: useRuntimeConfig()
     };
 });

@@ -1,5 +1,7 @@
 import { connectDB } from '../../utils/mongoose';
-import Anotacao from '../models/Anotacao';
+import { defineEventHandler, readBody } from 'h3'
+import Anotacao from '../../schemas/Anotacao';
+
 
 export default defineEventHandler(async (event) => {
     const body = await readBody(event);

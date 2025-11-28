@@ -1,4 +1,6 @@
 import mongoose from 'mongoose';
+// import { useRuntimeConfig } from 'nuxt/app';
+
 
 const config = useRuntimeConfig();
 

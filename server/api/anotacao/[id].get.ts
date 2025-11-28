@@ -1,5 +1,6 @@
 import Anotacao from '../../schemas/Anotacao';
 import { connectDB } from '../../utils/mongoose';
+import { defineEventHandler, createError } from 'h3'
 
 
 export default defineEventHandler(async (event) => {
